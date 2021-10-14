@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+example/CMakeFiles/c_one.dir/rule:
+	cd /home/ksp/test1/build && $(MAKE) -f CMakeFiles/Makefile2 example/CMakeFiles/c_one.dir/rule
+.PHONY : example/CMakeFiles/c_one.dir/rule
+
+# Convenience name for target.
+c_one: example/CMakeFiles/c_one.dir/rule
+
+.PHONY : c_one
+
+# fast build rule for target.
+c_one/fast:
+	cd /home/ksp/test1/build && $(MAKE) -f example/CMakeFiles/c_one.dir/build.make example/CMakeFiles/c_one.dir/build
+.PHONY : c_one/fast
+
+# Convenience name for target.
 example/CMakeFiles/roscpp_generate_messages_py.dir/rule:
 	cd /home/ksp/test1/build && $(MAKE) -f CMakeFiles/Makefile2 example/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : example/CMakeFiles/roscpp_generate_messages_py.dir/rule
@@ -422,6 +437,33 @@ std_msgs_generate_messages_py/fast:
 	cd /home/ksp/test1/build && $(MAKE) -f example/CMakeFiles/std_msgs_generate_messages_py.dir/build.make example/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
+src/c_one.o: src/c_one.cpp.o
+
+.PHONY : src/c_one.o
+
+# target to build an object file
+src/c_one.cpp.o:
+	cd /home/ksp/test1/build && $(MAKE) -f example/CMakeFiles/c_one.dir/build.make example/CMakeFiles/c_one.dir/src/c_one.cpp.o
+.PHONY : src/c_one.cpp.o
+
+src/c_one.i: src/c_one.cpp.i
+
+.PHONY : src/c_one.i
+
+# target to preprocess a source file
+src/c_one.cpp.i:
+	cd /home/ksp/test1/build && $(MAKE) -f example/CMakeFiles/c_one.dir/build.make example/CMakeFiles/c_one.dir/src/c_one.cpp.i
+.PHONY : src/c_one.cpp.i
+
+src/c_one.s: src/c_one.cpp.s
+
+.PHONY : src/c_one.s
+
+# target to generate assembly for a file
+src/c_one.cpp.s:
+	cd /home/ksp/test1/build && $(MAKE) -f example/CMakeFiles/c_one.dir/build.make example/CMakeFiles/c_one.dir/src/c_one.cpp.s
+.PHONY : src/c_one.cpp.s
+
 src/hello_world.o: src/hello_world.cpp.o
 
 .PHONY : src/hello_world.o
@@ -459,6 +501,7 @@ help:
 	@echo "... install/local"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... c_one"
 	@echo "... list_install_components"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... roscpp_generate_messages_eus"
@@ -479,6 +522,9 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... src/c_one.o"
+	@echo "... src/c_one.i"
+	@echo "... src/c_one.s"
 	@echo "... src/hello_world.o"
 	@echo "... src/hello_world.i"
 	@echo "... src/hello_world.s"

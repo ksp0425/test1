@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named c_one
+
+# Build rule for target.
+c_one: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 c_one
+.PHONY : c_one
+
+# fast build rule for target.
+c_one/fast:
+	$(MAKE) -f example/CMakeFiles/c_one.dir/build.make example/CMakeFiles/c_one.dir/build
+.PHONY : c_one/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_py
 
 # Build rule for target.
@@ -527,6 +540,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... c_one"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
